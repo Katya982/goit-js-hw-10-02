@@ -55,10 +55,17 @@ function onChangeSelector(e) {
             catInfo.classList.remove('visually-hidden');
         })
         .catch(error => {
+            clearContent();
             loader.classList.add('visually-hidden');
             Notiflix.Notify.failure('Oops! Something went wrong! Try reloading the page!');
             console.error(error);
         });
+}
+
+function clearContent() {
+  loader.classList.add('visually-hidden');
+  catInfo.classList.add('visually-hidden');
+  catInfo.innerHTML = '';
 }
 
 catSelector.addEventListener("change", onChangeSelector);
@@ -66,7 +73,7 @@ catSelector.addEventListener("change", onChangeSelector);
 function createMarkup(data) {
     const { breeds, url } = data[0];
     const { name, temperament, description } = breeds[0];
-    const beerdCard = `
+    const breedCard = `
       <img class="cat-img" width = "360px" src="${url}" alt="${name}">
       <div class="descr-wraper">
         <h2 class="cat-breed">${name}</h2>
@@ -76,6 +83,10 @@ function createMarkup(data) {
         </p>
       </div>
     `;
-    catInfo.innerHTML = beerdCard;
+    catInfo.innerHTML = breedCard;
 
 }
+
+
+
+
