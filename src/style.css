@@ -1,0 +1,80 @@
+body {
+  background-image: url('./images/1669657504_1-pibig-info-p-oboi-na-rabochii-stol-kotiki-pinterest-1.jpg');
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+
+.loader {
+    width: 30px;
+    height: 30px;
+    border: 5px solid #ffffff;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.cat-info {
+    display: flex;
+    align-content: center;
+    padding: 35px;
+    margin-top: 35px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 4px 10px 20px hsla(0, 0%, 0%, 25%);
+}
+
+.descr-wraper {
+    padding: 12px 12px 12px 35px;
+}
+
+.cat-breed {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-align:left;
+
+}
+
+.breed-select {
+    width: 400px;   
+}
+
+.breed-descr {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.cat-temp {
+    font-size: 18px;
+}
+
+.cat-img {
+    border-radius: 15px;
+}
